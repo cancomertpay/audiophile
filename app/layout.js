@@ -1,6 +1,9 @@
+import Header from "@/components/header/header";
 import "./globals.css";
 
 import { manrope } from "@/lib/typography";
+import Footer from "@/components/footer/footer";
+import About from "@/components/home/about";
 
 export const metadata = {
   title: "Audiophile",
@@ -10,7 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={manrope.className}>{children}</body>
+      <body className={`${manrope.className} select-none`}>
+        <Header />
+        {children}
+
+        {/* about section */}
+        <About />
+        <Footer />
+      </body>
     </html>
   );
 }
