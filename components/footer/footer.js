@@ -30,7 +30,7 @@ function Footer() {
       </div>
       <div className="lg:flex lg:items-stretch lg:justify-between">
         <p className="text-white/50 text-[15px] font-medium text-center my-10 md:text-start lg:w-1/2 lg:pr-10">
-          Audiophile is an all in one stop to fulfill your audio needs. We're a
+          Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a
           small team of music lovers and sound specialists who are devoted to
           helping you get the most out of personal audio. Come and visit our
           demo facility - we&apos;re open 7 days a week.
