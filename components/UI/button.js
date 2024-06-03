@@ -42,7 +42,7 @@ function Button({
         ) : (
           <span className="flex items-center gap-2">
             {children}
-            <div>
+            <span>
               <Image
                 className={`mb-[1px] transition-all duration-500 ease-in-out ${
                   isHovered ? "ml-2" : "ml-0"
@@ -52,7 +52,7 @@ function Button({
                 width={8}
                 height={12}
               />
-            </div>
+            </span>
           </span>
         )}
       </Link>
@@ -84,7 +84,7 @@ function Button({
       </button>
     );
 
-  return { buttonType };
+  return <>{buttonType}</>;
 }
 
 export default Button;
