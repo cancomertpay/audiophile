@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div className="relative">
       <HeroImage />
-      <div className="w-full lg:w-[390px] lg:h-[346px] absolute top-56 lg:left-44 right-0 md:px-32 lg:px-0">
+      <div className="w-full lg:w-[390px] lg:h-[346px] absolute top-56 lg:left-36 right-0 md:px-32 lg:px-0">
         <div className="tracking-[8px] text-sm text-white/50 text-center lg:text-start mb-5">
           NEW PRODUCT
         </div>

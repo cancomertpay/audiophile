@@ -1,5 +1,5 @@
 function NumberField({ productAmount, setProductAmount }) {
-  if (!productAmount) {
+  if (productAmount === undefined || (productAmount && null)) {
     throw new Error("Must be an productAmount state.");
   } else if (!setProductAmount) {
     throw new Error("Must be an setProductAmount state function.");
@@ -10,7 +10,7 @@ function NumberField({ productAmount, setProductAmount }) {
       <span
         className="text-xs font-bold text-black hover:text-primary-index cursor-pointer"
         onClick={() =>
-          setProductAmount((prev) => (prev !== 0 ? prev - 1 : prev))
+          setProductAmount((prev) => (prev !== 1 ? prev - 1 : prev))
         }
       >
         -

@@ -13,12 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} select-none`}>
+      <body className={`${manrope.className} select-none relative`}>
         <Header />
-        {children}
+        <main className="w-full bg-neutral-white">
+          {children}
 
-        {/* about section */}
-        <About />
+          {/* about section */}
+          <About />
+        </main>
+
         <Footer />
       </body>
     </html>

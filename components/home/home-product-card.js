@@ -13,19 +13,19 @@ function HomeProductCard({ cardStyle = "primary", title, description, href }) {
   switch (cardStyle) {
     case "primary":
       cardClasses =
-        "relative w-full mx-5 md:mx-10 h-[600px] bg-primary-index rounded-lg overflow-hidden md:h-[720px] lg:flex lg:items-center lg:justify-center lg:h-[560px] lg:mx-44";
+        "relative w-full mx-5 md:mx-10 h-[600px] bg-primary-index rounded-lg overflow-hidden md:h-[720px] lg:flex lg:items-center lg:justify-center lg:h-[560px] lg:mx-36";
       break;
     case "secondary":
       cardClasses =
-        "relative w-full flex items-center justify-center mx-5 md:mx-10 h-[320px] md:h-[320px] lg:h-[320px] lg:mx-44";
+        "relative w-full flex items-center justify-center mx-5 md:mx-10 h-[320px] md:h-[320px] lg:h-[320px] lg:mx-36";
       break;
     case "splitted":
       cardClasses =
-        "w-full h-[424px] mx-5 md:mx-10 flex flex-col items-center justify-center gap-5 md:gap-2 overflow-hidden md:h-[320px] md:flex-row lg:h-[320px] lg:mx-44 lg:gap-6";
+        "w-full h-[424px] mx-5 md:mx-10 flex flex-col items-center justify-center gap-5 md:gap-2 overflow-hidden md:h-[320px] md:flex-row lg:h-[320px] lg:mx-36 lg:gap-6";
       break;
     default:
       cardClasses =
-        "relative w-full h-[600px] bg-primary-index rounded-lg overflow-hidden md:h-[720px] lg:flex lg:items-center lg:justify-center lg:w-full lg:h-[560px] lg:mx-44";
+        "relative w-full h-[600px] bg-primary-index rounded-lg overflow-hidden md:h-[720px] lg:flex lg:items-center lg:justify-center lg:w-full lg:h-[560px] lg:mx-36";
       break;
   }
   return (

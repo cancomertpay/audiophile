@@ -32,7 +32,7 @@ function MobileNavbar() {
         id="overlay"
         className="fixed top-20 right-0 w-screen h-screen bg-black/30 overflow-auto"
       >
-        <div className="bg-white rounded-b-lg">
+        <div className="bg-white rounded-b-lg px-5 md:px-10 pt-20 pb-40 md:py-16">
           <NavList toggleNavbar={toggleNavbar} />
         </div>
       </motion.div>

@@ -17,7 +17,7 @@ function Button({
   switch (buttonStyle) {
     case "primary":
       buttonStyles =
-        "px-6 py-3 bg-primary-index hover:bg-primary-hover tracking-wider text-sm font-bold text-white uppercase transition-colors duration-200";
+        "px-10 py-4 bg-primary-index hover:bg-primary-hover tracking-wider text-sm font-bold text-white uppercase transition-colors duration-200";
       break;
     case "secondary":
       buttonStyles =
