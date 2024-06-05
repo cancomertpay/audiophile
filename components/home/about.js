@@ -6,7 +6,7 @@ function About() {
   return (
     <Container>
       <div className="w-full lg:flex lg:flex-row-reverse lg:items-center lg:justify-center lg:h-[588px] gap-10">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 lg:flex lg:items-center lg:justify-end">
           <Image
             src="/assets/shared/mobile/image-best-gear.jpg"
             alt="Happy customer image"

@@ -22,11 +22,11 @@ function NavItem({ id, image, title, href, onClick }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
-      className="w-full"
+      className="w-full h-full"
     >
       <Link
         href={href}
-        className="flex flex-col items-center justify-center w-full p-5 rounded-md bg-off-white relative mt-10"
+        className="flex flex-col items-center justify-center w-full h-full p-5 rounded-md bg-off-white relative mt-10"
       >
         <motion.div
           variants={imageVariants}
@@ -35,7 +35,7 @@ function NavItem({ id, image, title, href, onClick }) {
           <Image
             src={image.src}
             alt={image.alt}
-            className="-mt-20 w-[200px] h-auto"
+            className="-mt-20 !w-[147px] !h-[133px]"
           />
         </motion.div>
         <h3 className="text-black text-center font-bold uppercase tracking-wider mb-4">

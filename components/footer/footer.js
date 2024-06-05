@@ -3,28 +3,28 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="relative p-6 pt-0 flex flex-col items-center justify-center w-full bg-charcoal-gray text-white md:items-start md:p-10 lg:px-44">
+    <footer className="relative p-6 pt-0 flex flex-col items-center justify-center w-full bg-charcoal-gray text-white md:items-start md:p-10 lg:px-36">
       <div className="w-[25%] md:w-[15%] lg:w-[8%] border-t-4 border-primary-index absolute top-0" />
-      <div className="w-full flex flex-col items-center justify-center md:items-start md:justify-start lg:flex-row lg:justify-between">
+      <div className="w-full flex flex-col items-center justify-center md:items-start md:justify-start lg:flex-row lg:items-center lg:justify-between lg:mt-10">
         <Image
           src={"/assets/shared/desktop/logo.svg"}
           alt="Audiophile logo"
-          className="my-14 md:mt-5 md:mb-8"
+          className="my-14 md:mt-5 md:mb-8 lg:m-0"
           width={143}
           height={25}
         />
         <ul className="flex flex-col items-center justify-center gap-5 md:flex-row md:justify-start">
           <li className="tracking-widest uppercase text-white font-bold text-sm hover:text-primary-index transition-colors duration-300">
-            <Link href={"#"}>Home</Link>
+            <Link href={"/"}>Home</Link>
           </li>
           <li className="tracking-widest uppercase text-white font-bold text-sm hover:text-primary-index transition-colors duration-300">
-            <Link href={"#"}>HEADPHONES</Link>
+            <Link href={"/headphones"}>HEADPHONES</Link>
           </li>
           <li className="tracking-widest uppercase text-white font-bold text-sm hover:text-primary-index transition-colors duration-300">
-            <Link href={"#"}>SPEAKERS</Link>
+            <Link href={"/speakers"}>SPEAKERS</Link>
           </li>
           <li className="tracking-widest uppercase text-white font-bold text-sm hover:text-primary-index transition-colors duration-300">
-            <Link href={"#"}>EARPHONES</Link>
+            <Link href={"/earphones"}>EARPHONES</Link>
           </li>
         </ul>
       </div>

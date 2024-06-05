@@ -5,7 +5,6 @@ import NavItem from "./nav-item";
 import headphonesImg from "/public/assets/shared/desktop/image-category-thumbnail-headphones.png";
 import speakersImg from "/public/assets/shared/desktop/image-category-thumbnail-speakers.png";
 import earphonesImg from "/public/assets/shared/desktop/image-category-thumbnail-earphones.png";
-
 function NavList({ toggleNavbar }) {
   const navList = [
     {
@@ -38,7 +37,7 @@ function NavList({ toggleNavbar }) {
   ];
   return (
     <ul
-      className={`px-5 md:px-10 lg:px-44 pt-16 pb-20 md:pb-10 flex flex-col md:flex-row items-center justify-center gap-14 md:gap-3 lg:gap-6`}
+      className="flex flex-col md:flex-row items-center justify-center gap-14 md:gap-3 lg:gap-6"
     >
       {navList.map((item) => (
         <NavItem
