@@ -9,7 +9,7 @@ export default function Home() {
       {/* hero section */}
       <Hero />
       {/* navlist section */}
-      <div className="mb-10 md:my-16 lg:my-24 pb-20 md:pb-10 mx-5 md:mx-10 lg:mx-36">
+      <div className="my-24 md:my-16 lg:my-24 mx-5 md:mx-10 lg:mx-36">
         <NavList />
       </div>
       {/* product cards section */}
