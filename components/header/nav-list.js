@@ -5,7 +5,7 @@ import NavItem from "./nav-item";
 import headphonesImg from "/public/assets/shared/desktop/image-category-thumbnail-headphones.png";
 import speakersImg from "/public/assets/shared/desktop/image-category-thumbnail-speakers.png";
 import earphonesImg from "/public/assets/shared/desktop/image-category-thumbnail-earphones.png";
-function NavList({ toggleNavbar }) {
+function NavList() {
   const navList = [
     {
       id: "headphones",
@@ -46,7 +46,6 @@ function NavList({ toggleNavbar }) {
           image={item.image}
           title={item.title}
           href={item.href}
-          onClick={toggleNavbar}
         />
       ))}
     </ul>

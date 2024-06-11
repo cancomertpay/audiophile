@@ -10,7 +10,7 @@ import Link from "next/link";
 // framer-motion
 import { motion } from "framer-motion";
 
-function NavItem({ id, image, title, href, onClick }) {
+function NavItem({ id, image, title, href }) {
   const [isHovered, setIsHovered] = useState(false);
   const imageVariants = {
     start: { y: -30 },
@@ -21,7 +21,6 @@ function NavItem({ id, image, title, href, onClick }) {
       id={id}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
       className="w-full h-full"
     >
       <Link

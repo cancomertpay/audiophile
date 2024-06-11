@@ -2,11 +2,12 @@ import Image from "next/image";
 import Navbar from "./navbar";
 import Container from "./container";
 import Link from "next/link";
+import ShoppingCart from "./shopping-cart";
 
 function Header() {
   return (
     <Container>
-      <header className="py-7 lg:py-10 px-10 lg:px-0 text-white border-b-2 border-white/10">
+      <header className="py-7 lg:py-10 px-5 lg:px-0 text-white border-b-2 border-white/10">
         {/* sm */}
         <div className="md:hidden flex items-center justify-between">
           <Navbar />
@@ -19,12 +20,7 @@ function Header() {
               priority
             />
           </Link>
-          <Image
-            src="/assets/shared/desktop/icon-cart.svg"
-            alt="cart icon"
-            width={23}
-            height={20}
-          />
+          <ShoppingCart />
         </div>
         {/* md */}
         <div className="hidden md:flex lg:hidden items-center justify-between">
@@ -40,12 +36,7 @@ function Header() {
               />
             </Link>
           </div>
-          <Image
-            src="/assets/shared/desktop/icon-cart.svg"
-            alt="cart icon"
-            width={23}
-            height={20}
-          />
+          <ShoppingCart />
         </div>
         {/* lg */}
         <div className="hidden lg:flex items-center justify-between">
@@ -59,12 +50,7 @@ function Header() {
             />
           </Link>
           <Navbar />
-          <Image
-            src="/assets/shared/desktop/icon-cart.svg"
-            alt="cart icon"
-            width={23}
-            height={20}
-          />
+          <ShoppingCart />
         </div>
       </header>
     </Container>

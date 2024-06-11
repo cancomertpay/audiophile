@@ -64,7 +64,7 @@ function ProductCard({ product }) {
               <h5 className="text-center text-[24px] leading-10 font-bold tracking-wider uppercase my-5 text-charcoal-gray">
                 {other.name}
               </h5>
-              <div className="text-center mt-10">
+              <div className="text-center mt-10 mx-20">
                 <Button type="link" href={`/${other.slug}`}>
                   See Product
                 </Button>

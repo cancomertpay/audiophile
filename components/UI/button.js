@@ -8,7 +8,9 @@ function Button({
   buttonStyle = "primary",
   type = "button",
   href = "#",
+  disabled,
   children,
+  onClick
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -17,15 +19,15 @@ function Button({
   switch (buttonStyle) {
     case "primary":
       buttonStyles =
-        "px-10 py-4 bg-primary-index hover:bg-primary-hover tracking-wider text-sm font-bold text-white uppercase transition-colors duration-200";
+        `block w-full text-center px-8 py-4 bg-primary-index hover:bg-primary-hover tracking-wider text-sm font-bold text-white uppercase transition-colors duration-200 disabled:bg-primary-index/50 disabled:cursor-not-allowed ${type === "link" && disabled ? "bg-primary-index/50 cursor-not-allowed hover:bg-primary-index/50" : ""}`;
       break;
     case "secondary":
       buttonStyles =
-        "px-6 py-3 border-2 border-black bg-white  hover:bg-black hover:text-white tracking-wider text-black font-bold uppercase transition-colors duration-200";
+        "px-6 py-3 border-2 text-center border-black bg-white  hover:bg-black hover:text-white tracking-wider text-black font-bold uppercase transition-colors duration-200 ";
       break;
     case "basic":
       buttonStyles =
-        "text-sm font-bold text-charcoal-gray/60 hover:text-primary-index tracking-wider uppercase transition-colors duration-200";
+        "text-sm font-bold text-center text-charcoal-gray/60 hover:text-primary-index tracking-wider uppercase transition-colors duration-200";
       break;
   }
 
@@ -61,7 +63,9 @@ function Button({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={buttonStyles}
+        disabled={disabled}
         type={type}
+        onClick={onClick}
       >
         {buttonStyle !== "basic" ? (
           children
