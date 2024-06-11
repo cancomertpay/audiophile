@@ -1,41 +1,20 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import Toggle from "../toggle-navbar";
-import { toggleNavVariants } from "@/lib/variants";
+import Module from "@/components/UI/module";
 import NavList from "../nav-list";
 
-
 function MobileNavbar() {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsNavbarOpen((prev) => !prev);
-  };
-
-  useEffect(() => {
-    if (isNavbarOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isNavbarOpen]);
-
   return (
     <div className="lg:hidden">
-      <Toggle id="toggle-navbar" onClick={toggleNavbar} />
-      <motion.div
-        variants={toggleNavVariants}
-        initial={"hidden"}
-        animate={isNavbarOpen ? "visible" : "hidden"}
-        id="overlay"
-        className="fixed top-20 right-0 w-screen h-screen bg-black/30 overflow-auto"
+      <Module
+        toggler={{
+          src: "/assets/shared/tablet/icon-hamburger.svg",
+          alt: "Navbar toggle icon",
+        }}
+        modulePosition={{ top: "5.2rem", right: "0" }}
       >
-        <div className="bg-white rounded-b-lg px-5 md:px-10 pt-20 pb-40 md:py-16">
-          <NavList toggleNavbar={toggleNavbar} />
+        <div className="bg-white rounded-b-lg px-5 md:px-10 pt-16 pb-10 md:py-16 max-h-[80vh] overflow-y-auto">
+          <NavList />
         </div>
-      </motion.div>
+      </Module>
     </div>
   );
 }

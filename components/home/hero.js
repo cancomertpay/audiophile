@@ -11,12 +11,20 @@ function Hero() {
           NEW PRODUCT
         </div>
         <ProductTitle>XX99 Mark II Headphones</ProductTitle>
-        <p className="block mx-12 md:mx-16 lg:mx-0 font-medium text-white/60 text-base text-center lg:text-start mb-10">
+        <p className="block mx-12 md:mx-16 lg:mx-0 font-medium text-white/60 text-base text-center lg:text-start mb-8">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <div className="text-center lg:text-start">
-          <Button buttonStyle="primary" type="link" href="xx99-mark-one-headphones">See Product</Button>
+        <div className="w-full flex items-center justify-center lg:justify-start">
+          <div className="md:w-1/2">
+            <Button
+              buttonStyle="primary"
+              type="link"
+              href="headphones/xx99-mark-two-headphones"
+            >
+              See Product
+            </Button>
+          </div>
         </div>
       </div>
     </div>

@@ -71,7 +71,7 @@ function HomeProductCard({ cardStyle = "primary", title, description, href }) {
               <div className="text-center lg:text-start">
                 <Link
                   className="px-6 py-3 bg-charcoal-gray hover:bg-[#4C4C4C] tracking-wider text-sm font-bold text-white uppercase transition-colors duration-300"
-                  href={"#"}
+                  href={href}
                 >
                   See Product
                 </Link>
@@ -152,7 +152,7 @@ function HomeProductCard({ cardStyle = "primary", title, description, href }) {
               </h2>
               <Link
                 className="px-6 py-3 bg-transparent border border-charcoal-gray hover:bg-charcoal-gray hover:text-white tracking-wider text-sm font-bold text-charcoal-gray uppercase transition-colors duration-500"
-                href={"#"}
+                href={href}
               >
                 See Product
               </Link>

@@ -1,18 +1,7 @@
-import Image from "next/image";
+import GlobalLoadingIndicator from "@/components/UI/GlobalLoadingIndicator";
 
 function Loading() {
-  return (
-    <div className="h-screen w-screen bg-black flex items-center justify-center overflow-hidden">
-      <Image
-        src="/assets/shared/desktop/logo.svg"
-        alt="audiophile logo"
-        width="148"
-        height="25"
-        priority
-        className="animate-pulse"
-      />
-    </div>
-  );
+  return <GlobalLoadingIndicator />;
 }
 
 export default Loading;

@@ -21,10 +21,10 @@ export default function Home() {
           </>
         }
         description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
-        href="#"
+        href="speakers/zx9-speaker"
       />
-      <HomeProductCard cardStyle="secondary" title="ZX7 SPEAKER" href="#" />
-      <HomeProductCard cardStyle="splitted" title="YX1 EARPHONES" href="#" />
+      <HomeProductCard cardStyle="secondary" title="ZX7 SPEAKER" href="speakers/zx7-speaker" />
+      <HomeProductCard cardStyle="splitted" title="YX1 EARPHONES" href="earphones/yx1-earphones" />
     </div>
   );
 }

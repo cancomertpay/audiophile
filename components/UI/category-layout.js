@@ -34,7 +34,7 @@ function CategoryLayout({ categoryName, data }) {
                 <p className="text-center lg:text-start font-normal text-charcoal-gray/60 text-[15px] leading-6 mb-10 lg:mb-14 lg:pr-20">
                   {product.description}
                 </p>
-                <div className="text-center lg:text-start">
+                <div className="text-center lg:text-start mx-16 lg:mx-0 lg:w-[37%]">
                   <Button
                     buttonStyle="primary"
                     type="link"

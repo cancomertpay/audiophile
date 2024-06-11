@@ -16,7 +16,7 @@ function ProductDetailLayout({ product }) {
       <>
         {product ? (
           <>
-            <div className="md:flex items-center justify-between gap-20 md:mb-28">
+            <div className="md:flex items-center justify-between gap-16 md:mb-28">
               <div className="md:w-1/2">
                 <ProductImage product={product} />
               </div>
@@ -35,8 +35,16 @@ function ProductDetailLayout({ product }) {
                 <span className="block text-lg font-bold text-charcoal-gray tracking-wider my-5">
                   {formatPrice(product.price)}
                 </span>
-                <div className="mb-20">
-                  <AddToCartForm />
+                <div className="mb-20 lg:pr-52">
+                  <AddToCartForm
+                    product={{
+                      id: product.id,
+                      image: product.image,
+                      name: product.name,
+                      price: product.price,
+                      quantity: 1,
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -49,7 +57,7 @@ function ProductDetailLayout({ product }) {
                   {formatFeatures(product.features)}
                 </div>
               </div>
-              <div className="mb-20 md:flex md:justify-between lg:flex-col lg:justify-stretch lg:items-center lg:w-1/2">
+              <div className="mb-20 md:flex md:justify-start md:gap-40 lg:gap-0 lg:flex-col lg:justify-stretch lg:items-center lg:w-1/2">
                 <h3 className="text-[24px] lg:text-[32px] font-bold tracking-wider uppercase my-5 text-charcoal-gray md:my-0 lg:my-5">
                   In The Box
                 </h3>
@@ -74,14 +82,14 @@ function ProductDetailLayout({ product }) {
               <h4 className="text-center text-[24px] leading-10 font-bold tracking-wider uppercase my-5 text-charcoal-gray">
                 You may also like
               </h4>
-              <ul className="md:flex md:items-stretch md:justify-center md:gap-3 ">
+              <ul className="md:flex md:items-stretch md:justify-center md:gap-3">
                 {product.others?.map((other, index) => (
-                  <li key={index} className="mb-20">
+                  <li key={index} className="mb-20 w-1/3">
                     <ThumbnailImage product={other} />
-                    <h5 className="text-center text-[24px] leading-10 font-bold tracking-wider uppercase my-5 text-charcoal-gray">
+                    <h5 className="text-center text-[24px] leading-10 font-bold tracking-wider uppercase my-5 md:mb-0 text-charcoal-gray">
                       {other.name}
                     </h5>
-                    <div className="text-center mt-10">
+                    <div className="text-center mt-10 mx-16 md:mx-5 lg:mx-20">
                       <Button
                         type="link"
                         href={`/${other?.category}/${other.slug}`}

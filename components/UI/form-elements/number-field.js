@@ -6,7 +6,7 @@ function NumberField({ productAmount, setProductAmount }) {
   }
 
   return (
-    <div className="w-[120px] h-[48pz] inline-flex items-center justify-around px-1 py-3 bg-off-white select-none">
+    <div className="min-w-[120px] inline-flex items-center justify-around px-1 py-3 bg-off-white select-none">
       <span
         className="text-xs font-bold text-black hover:text-primary-index cursor-pointer"
         onClick={() =>
