@@ -12,7 +12,10 @@ function Success({ formData, success }) {
 
   return (
     <Module open={success} center>
-      <div id="success" className="mx-6 p-7 md:p-14 bg-white rounded-lg md:min-w-[540px]">
+      <div
+        id="success"
+        className="mx-6 p-7 md:p-14 bg-white rounded-lg md:min-w-[540px]"
+      >
         <Image
           src="/assets/checkout/icon-order-confirmation.svg"
           alt="Succes icon"
@@ -31,17 +34,17 @@ function Success({ formData, success }) {
         {/* products */}
         <div className="my-5 md:mb-10 md:w-full md:flex md:items-stretch md:justify-center md:h-[140px] box-border">
           <ul
-            className="box-content bg-off-white p-5 rounded-t-lg md:rounded-t-none md:rounded-s-lg max-h-[20vh] overflow-auto md:w-1/2 md:max-h-none cursor-pointer"
+            className="box-content bg-off-white p-5 rounded-t-lg md:rounded-t-none md:rounded-l-lg max-h-[20vh] overflow-auto md:w-1/2 md:max-h-none cursor-pointer"
             onClick={() => setShowOthers((prev) => !prev)}
           >
             {formData?.purchasedList?.map((item, index, arr) => (
               <li
                 key={index}
                 className={`w-full flex items-center gap-5 ${
-                  arr.length > 1 && index === 0 ? "pb-3 border-b-2" : ""
-                } ${index > 0 && showOthers ? "py-3 border-b-2" : ""} ${
-                  arr.length - 1 === index ? "pb-0 border-none" : ""
-                }`}
+                  arr.length === 1 ? "h-full justify-center" : ""
+                }  ${arr.length > 1 && index === 0 ? "pb-3 border-b-2" : ""} ${
+                  index > 0 && showOthers ? "py-3 border-b-2" : ""
+                } ${arr.length - 1 === index ? "pb-0 border-none" : ""}`}
               >
                 {index === 0 || showOthers ? (
                   <>
@@ -74,7 +77,7 @@ function Success({ formData, success }) {
               </li>
             )}
           </ul>
-          <div className="bg-black rounded-b-lg md:rounded-b-none md:rounded-e-lg p-5 md:w-1/2">
+          <div className="bg-black rounded-b-lg md:rounded-b-none md:rounded-r-lg p-5 md:w-1/2">
             <div className="md:flex md:flex-col md:h-full md:justify-center">
               <div className="text-white/50 font-bold uppercase tracking-wider text-[15px] mb-2">
                 Grand Total
