@@ -84,7 +84,7 @@ function ProductDetailLayout({ product }) {
               </h4>
               <ul className="md:flex md:items-stretch md:justify-center md:gap-3">
                 {product.others?.map((other, index) => (
-                  <li key={index} className="mb-20 w-1/3">
+                  <li key={index} className="mb-20 md:w-1/3">
                     <ThumbnailImage product={other} />
                     <h5 className="text-center text-[24px] leading-10 font-bold tracking-wider uppercase my-5 md:mb-0 text-charcoal-gray">
                       {other.name}
