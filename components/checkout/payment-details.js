@@ -38,6 +38,7 @@ function PaymentDetails({ formError }) {
             <Input
               id="e-money-number"
               title="e-Money Number"
+              type="number"
               placeholder="238521993"
               formError={formError["e-money-number"]}
             />
@@ -46,6 +47,7 @@ function PaymentDetails({ formError }) {
             <Input
               id="e-money-pin"
               title="e-Money PIN"
+              type="number"
               placeholder="6891"
               formError={formError["e-money-pin"]}
             />

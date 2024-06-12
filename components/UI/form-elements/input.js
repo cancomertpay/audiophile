@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import RadioSelection from "./radio-selection";
 
-function Input({ id, title, placeholder, type = "text", formError }) {
+function Input({ id, title, placeholder, type = "text", formError, forwardRef }) {
   const [userInputs, setUserInputs] = useState("");
   const [error, setError] = useState("");
 
@@ -49,6 +49,7 @@ function Input({ id, title, placeholder, type = "text", formError }) {
             )}
           </div>
           <input
+            ref={forwardRef}
             id={id}
             name={id}
             type={type}

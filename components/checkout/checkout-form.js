@@ -1,7 +1,7 @@
 "use client";
 
 import { useCartContext } from "@/context/cart-context";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import PaymentDetails from "@/components/checkout/payment-details";
 import Summary from "@/components/checkout/summary";
@@ -14,6 +14,8 @@ function CheckoutForm() {
   const [formData, setFormData] = useState({});
   const [formError, setFormError] = useState({});
   const [success, setSuccess] = useState(false);
+
+  const firstErrorInputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,7 +40,11 @@ function CheckoutForm() {
       setSuccess(true);
       clearShoppingCart();
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const firstErrorKey = Object.keys(newErrors)[0];
+      const firstErrorInput = document.getElementById(firstErrorKey);
+      if (firstErrorInput) {
+        firstErrorInput.focus();
+      }
     }
   };
 
@@ -75,6 +81,7 @@ function CheckoutForm() {
                   type: "text",
                 },
               ]}
+              forwardRef={firstErrorInputRef}
             />
 
             {/* shipping info */}
@@ -104,9 +111,10 @@ function CheckoutForm() {
                   placeholder: "United States",
                 },
               ]}
+              forwardRef={firstErrorInputRef}
             />
 
-            <PaymentDetails formError={formError} />
+            <PaymentDetails formError={formError} firstErrorInputRef={firstErrorInputRef} />
           </div>
         </div>
         <Summary />

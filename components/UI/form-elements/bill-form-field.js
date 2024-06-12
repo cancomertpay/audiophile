@@ -1,6 +1,6 @@
 import Input from "./input";
 
-function BillFormField({ formName = "", formError, inputs = [] }) {
+function BillFormField({ formName = "", formError, inputs = [], forwardRef }) {
   return (
     <div>
       <h2 className="uppercase text-primary-index font-bold text-[13px] tracking-widest mb-5 md:px-5 md:mb-1">
@@ -21,6 +21,7 @@ function BillFormField({ formName = "", formError, inputs = [] }) {
                 placeholder={input?.placeholder}
                 type={input?.type}
                 formError={formError[input?.id]}
+                forwardRef={forwardRef}
               />
             </div>
           ))}
