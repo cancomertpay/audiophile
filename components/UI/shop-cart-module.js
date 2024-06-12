@@ -70,7 +70,7 @@ function ShopCartModule({
         onClick={closeModule}
       >
         <div
-          className="lg:absolute lg:top-0 lg:right-36 lg:w-[377px] mt-[6.5rem] lg:mt-8 mx-6 lg:mx-0 p-7 bg-white rounded-lg"
+          className="md:absolute md:right-0 lg:top-0 lg:right-36 md:w-[377px] mt-[6.5rem] lg:mt-8 mx-6 md:mr-10 lg:mx-0 p-7 bg-white rounded-lg"
           onClick={(e) => e.stopPropagation()}
         >
           {children}
